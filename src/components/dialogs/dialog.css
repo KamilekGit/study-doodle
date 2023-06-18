@@ -1,0 +1,12 @@
+.messager{
+    text-align: end;
+}
+.messager a{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+}
+.messager a:hover{
+    background-color:#fff9 ;
+}
