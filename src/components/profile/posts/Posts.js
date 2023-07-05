@@ -1,14 +1,17 @@
-import React from "react";
-import Post from "./post/Post.js";
-function Posts(){
+import React from 'react'
+import Post from './post/Post.js'
+import profileInfo from '../profile_info/ProfileInfo.js'
+
+function Posts(props){
     return(
-        <div className="posts">
-        <input placeholder="enter the post"></input>
+    <div className='posts'>
+        <h2>My posts</h2>
+        <input placeholder='enter the post' />
         <button>Add post</button>
-        <Post message="Hi, world"/>
-        <Post message="i'm Elon Mask, really"/>
-        <Post message="Give me some bitcoin"/>
-        </div>
+        {props.postsItems.map((e)=> <Post message ={e.message} likes={e.likes}/>)}
+      
+        
+    </div>
     )
 }
 export default Posts

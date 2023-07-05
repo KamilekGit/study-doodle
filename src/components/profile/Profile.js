@@ -1,20 +1,16 @@
-import React from "react"
+import React from 'react'
 import './Profile.css'
-import ava from './elon.jpg'
-import ava_min from './elon_mini.jpeg'
-import Posts from "./posts/Posts"
-function Profile() {
-  return (
-    <div className='profile'>
-      <div className="me">
-
-
-        <img src={require("./elon_mini.jpeg")} alt="profile mini photo" />
-        <p>Elon Mask</p>
-
-      </div>
-      <Posts />
-    </div>
-  )
-}
+import ProfileInfo from './profile_info/ProfileInfo'
+import ava from '../../img/elon.jpg'
+import Posts from './posts/Posts'
+function Profile(props) {
+    return (
+        
+  <div className='profile'>
+    <ProfileInfo/>
+    <Posts postsItems = {props.postsItems}/>
+  </div>
+        
+    )
+  }
 export default Profile
